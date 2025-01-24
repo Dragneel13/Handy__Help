@@ -1,0 +1,36 @@
+body {
+  height: 100vh;
+  color: #000;
+}
+.full {
+  background: url(../assets/Homebg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(2px);
+  height: 615px;
+  padding: 0 48px;
+}
+.box {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.desciptive {
+  text-align: center;
+  padding: 0 48px;
+}
+.desciptive h1 {
+  font-size: 72px;
+}
+.desciptive p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.image {
+  background: url(../assets/sideimg.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 600px;
+  border-radius: 75%;
+}
