@@ -1,0 +1,12 @@
+.outer-div {
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inner-div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

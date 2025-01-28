@@ -18,12 +18,8 @@ const Navbar = () => {
           Jobs
         </Link>{" "}
         |
-        <Link className="link" to="/profile">
-          Profile
-        </Link>{" "}
-        |
-        <Link className="link" to="/chat">
-          Chat
+        <Link className="link" to="/aboutus">
+          About us
         </Link>{" "}
         |
         <Link className="link" to="/login">

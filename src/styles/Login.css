@@ -1,35 +1,73 @@
+section {
+  background: url(../assets/Homebg.jpg);
+}
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .login-container {
-  height: 100vh;
+  height: 89vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../assets/Homebg.jpg);
 }
-form {
-  padding: 0 48px 48px 48px;
+span p a {
+  margin-left: 10px;
+}
+span p {
+  color: #777;
+}
+.login-form {
+  padding: 48px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  border: 2px solid #333;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  background-color: transparent;
   backdrop-filter: blur(30px);
 }
-.input-box {
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+.input-container {
   display: flex;
+  flex-direction: column;
+  align-items: start;
   gap: 12px;
 }
 input {
-  width: 200px;
-  padding: 4px 8px;
+  padding: 8px 12px;
   color: #000;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #eee;
+  border: 1px solid #777;
+  outline: none;
 }
 input::placeholder {
-  font-size: 14px;
+  font-size: 16px;
+  border: gold;
 }
 button {
   padding: 8px 8px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   border-radius: 12px;
+  border: 1px solid #777;
+  background-color: burlywood;
   cursor: pointer;
+}
+
+.image-container {
+  background: url("../assets/loginimage.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
 }
