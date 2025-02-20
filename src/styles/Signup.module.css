@@ -1,0 +1,83 @@
+/* Container for the signup form */
+.parent {
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup-form {
+  max-width: 400px;
+  margin: 56px auto;
+  padding: 20px;
+  border: 1px solid var(--form-border);
+  border-radius: 8px;
+  background-color: var(--form-bg);
+  box-shadow: 0 4px 8px var(--form-shadow);
+}
+
+/* Heading */
+.signup-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+/* Form labels */
+.signup-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--label-color);
+  text-align: left;
+  font-weight: 700;
+}
+
+/* Form inputs */
+.signup-form .form-control {
+  width: 94.5%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.signup-form .form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px var(--input-focus);
+}
+
+/* Submit button */
+.signup-form .btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form .btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Forgot password link */
+.signup-form .forgot-password {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signup-form .forgot-password a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.signup-form .forgot-password a:hover {
+  text-decoration: underline;
+}

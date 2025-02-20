@@ -1,0 +1,58 @@
+/* .plumber-container {
+  height: 85vh;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.plumber-container h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.job-card {
+  background: rgba(222, 184, 135, 0.414);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.job-card h3 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+strong {
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .plumber-container {
+    padding: 15px;
+  }
+
+  .job-card {
+    padding: 10px;
+  }
+
+  .plumber-container h1 {
+    font-size: 20px;
+  }
+} */

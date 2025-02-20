@@ -1,60 +1,68 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom"; // Added Link import
-import "../styles/Login.css";
-
+import { useNavigate, Link } from "react-router-dom";
+import styles from "../styles/Login.module.css";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./firebase";
+import { toast } from "react-toastify";
+import SignInWithGoogle from "../components/signInWithGoogle";
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    if (username) {
-      localStorage.setItem("username", username);
-      navigate("/welcome");
-    } else {
-      alert("Please enter a username!");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      console.log("User logged in successfully");
+      window.location.href = "/PostJob";
+      toast.success("User Logged in Successfully", {
+        position: "top-center",
+      });
+    } catch (error) {
+      console.log(error.message);
+      toast.error(error.message, {
+        position: "bottom-center",
+      });
     }
   };
-
   return (
-    <section>
-      <div className="container">
-        <div className="login-container">
-          <form className="login-form">
-            <h1>Login</h1>
+    <div className="parent">
+      <form onSubmit={handleSubmit} className={styles["login-form"]}>
+        <h3>Login</h3>
 
-            <div className="input-container">
-              <label>Username:</label>
-              <input
-                className="bag"
-                type="text"
-                placeholder="Enter username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
-              />
-            </div>
-            <div className="input-container">
-              <label>Password:</label>
-              <input
-                className="bag"
-                type="password"
-                placeholder="Enter password"
-                required
-              />
-            </div>
-            <span>
-              <p>
-                Don't have an account? <Link to="/signup">sign-up</Link>
-              </p>
-            </span>
-            <button type="submit" onClick={handleLogin}>
-              Login
-            </button>
-          </form>
+        <div className={styles["form-group"]}>
+          <label>Email address</label>
+          <input
+            type="email"
+            className={styles["form-control"]}
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
-        <div className="image-container"></div>
-      </div>
-    </section>
+
+        <div className={styles["form-group"]}>
+          <label>Password</label>
+          <input
+            type="password"
+            className={styles["form-control"]}
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+
+        <div className={styles["button-container"]}>
+          <button type="submit" className={styles["btn-primary"]}>
+            Submit
+          </button>
+        </div>
+
+        <p className={styles["forgot-password"]}>
+          New user <a href="/signup">Register Here</a>
+        </p>
+        <SignInWithGoogle />
+      </form>
+    </div>
   );
 };
 
